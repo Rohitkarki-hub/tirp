@@ -2,24 +2,27 @@ import React from "react";
 import { Link } from "react-scroll";
 import Button from "../layouts/Button";
 
+import img from "../assets/imgs/hero.jpg";
 const Home = () => {
   const backgroundColor = `bg-brightColor`;
   return (
-    <div>
-      <div>
-        <h1>Discover the Best Destination</h1>
+    <div className="min-h-screen lg:min-h-[98vh] flex flex-col justify-center lg:flex-row items-center md:mx-32 mx-5">
+      <div className="flex flex-col text-center lg:text-start gap-5">
+        <h1 className="font-semibold text-5xl leading-tight">
+          Discover the Best Destination
+        </h1>
         <p>
           With TripVista you can experience new travel and the best tourist
           destination the we have to offer
         </p>
-        <div>
-          <Link>
+        <div className="lg:pl-24">
+          <Link to="destinations" spy={true} smooth={true} duration={500}>
             <Button title="Destinations" backgroundColor={backgroundColor} />
           </Link>
         </div>
       </div>
-      <div>
-        <img src="" alt="" />
+      <div className="mt-14 lg:mt0 w-full lg:w-4/5">
+        <img src={img} alt="img" />
       </div>
     </div>
   );
